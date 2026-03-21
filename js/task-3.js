@@ -1,7 +1,8 @@
 function checkForSpam(message) {
     const word1 = 'spam';
     const word2 = 'sale';
-    if (message.toLowerCase().includes(word1) || message.toLowerCase().includes(word2)) {
+    const normalizedMessage = message.toLowerCase();
+    if (message.includes(word1) || message.includes(word2)) {
         return true;
     } else {
         return false;
